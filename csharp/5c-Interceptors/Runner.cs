@@ -12,7 +12,7 @@ public class Runner
 
     public static void DoTheMagic(int x)
     {
-        Console.WriteLine($"Foo with {x}");
+        Console.WriteLine($"Magic with {x}");
     }
 
     public void Foo() 
