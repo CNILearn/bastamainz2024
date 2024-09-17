@@ -1,0 +1,1 @@
+﻿global using OkOrNotFound = System.Threading.Tasks.Task<Microsoft.AspNetCore.Http.HttpResults.Results<Microsoft.AspNetCore.Http.HttpResults.Ok<MinimalAPI.Book>, Microsoft.AspNetCore.Http.HttpResults.NotFound>>;
