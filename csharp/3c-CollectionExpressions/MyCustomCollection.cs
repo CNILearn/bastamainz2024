@@ -1,7 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using System.Runtime.CompilerServices;
 
-namespace CollectionLiterals;
+namespace CollectionExpressions;
 
 [CollectionBuilder(typeof(MyCustomCollection), nameof(MyCustomCollection.Create))]
 internal class MyCustomCollection<T> : Collection<T>
