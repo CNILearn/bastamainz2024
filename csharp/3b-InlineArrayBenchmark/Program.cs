@@ -17,7 +17,7 @@ public struct Buffer
 public class Runner
 {
     [Benchmark]
-    public void UseNormalArray()
+    public int UseNormalArray()
     {
         var buffer = new int[4];
         for (var i = 0; i < buffer.Length; i++)
@@ -29,11 +29,11 @@ public class Runner
         {
             result += i;
         }
-        // Console.WriteLine(result);
+        return result;
     }
 
     [Benchmark]
-    public void UseBuffer()
+    public int UseBuffer()
     {
         Buffer buffer = new();
         for (var i = 0; i < 4; i++)
@@ -45,6 +45,6 @@ public class Runner
         {
             result += i;
         }
-       // Console.WriteLine(result);
+        return result;
     }
 }
