@@ -21,17 +21,20 @@ int[] ints = MethodUsingADelegate(() =>
 });
 Console.WriteLine(string.Join(", ", ints));
 
+#region .NET 9
 //ReadOnlySpan<string?> strings = MethodUsingADelegate(() =>
 //{
 //    string[] arr = [ "one", "two", "three" ];
 //    return arr.AsSpan();
 //});
 //Console.WriteLine(string.Join(',', strings));
+#endregion
 
 static T MethodUsingADelegate<T>(Func<T> f1) => f1();
 
+#region .NET 9
 // static T MethodUsingADelegate<T>(Func<T> f1) where T : allows ref struct => f1();  
-
+#endregion
 class MyClass(int x)
 {
     private readonly int _x = x;
@@ -60,6 +63,7 @@ readonly ref struct MyRefStruct(int x)
     }
 }
 
+#region C# 13
 //public readonly ref struct ColorResult(int correct, int wrongPosition) : ISpanFormattable
 //{
 //    private const char Separator = ':';
@@ -96,3 +100,5 @@ readonly ref struct MyRefStruct(int x)
 //        return true;
 //    }
 //}
+
+#endregion
