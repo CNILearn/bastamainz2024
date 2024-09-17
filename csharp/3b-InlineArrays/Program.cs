@@ -53,22 +53,14 @@ void ShowInlineArray(Span<int> s1)
 [InlineArray(10)]
 public struct Buffer
 {
-#pragma warning disable IDE0044 // Add readonly modifier
-#pragma warning disable IDE0051 // Remove unused private members
     private int _x;
-#pragma warning restore IDE0051 // Remove unused private members
-#pragma warning restore IDE0044 // Add readonly modifier
 }
 
 // generic buffer
 [InlineArray(10)]
 public struct Buffer<T>
 {
-#pragma warning disable IDE0044 // Add readonly modifier
-#pragma warning disable IDE0051 // Remove unused private members
     private T _item;
-#pragma warning restore IDE0051 // Remove unused private members
-#pragma warning restore IDE0044 // Add readonly modifier
 }
 
 public class Person
