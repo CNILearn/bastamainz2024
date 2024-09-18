@@ -43,6 +43,8 @@ Grafana? Prometheus? Application Insights? OpenTelemetry? Am Beispiel einer vert
 
 #### Codebreaker
 
+> Get the sample from chapter 11 of the *Pragmatic Microservices* book!
+
 For **logging**, see the `GamesApi` project, the `Infrastructure\Log` class for source-generated logging. The `GamesService` class injects the ILogger interface, and writes log messages.
 
 For **metrics**, see the `Infrastructure\GamesMetrics` class uses instruments to write counts. The `ApplicationServices` class configures the dependency injection container to configure metrics. The `GamesService` class writes metrics (`GameStarted`, `MoveSet`, `GameEnded`).
