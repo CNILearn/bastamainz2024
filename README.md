@@ -33,7 +33,28 @@ Donnerstag, 19.9.2024, 12:00 - 13:00, Gutenbergsaal 1
 
 Grafana? Prometheus? Application Insights? OpenTelemetry? Am Beispiel einer verteilten Lösung die sowohl on Premises als auch mit Azure Cloud Services läuft, sehen Sie wie Log, Metrics, und Distributed Tracing mit .NET-Applikationen implementiert werden können, und diese Daten mit Grafana und Prometheus sowie mit Azure Services wie Azure Monitor, Log Analytics und Application Insights ausgewertet werden kann.
 
+[Slides](slides/telemetry.pdf)
+
+### Samples
+
+- Logging
+- Metrics
+- Distributed Tracing
+
+#### Codebreaker
+
+For **logging**, see the `GamesApi` project, the `Infrastructure\Log` class for source-generated logging. The `GamesService` class injects the ILogger interface, and writes log messages.
+
+For **metrics**, see the `Infrastructure\GamesMetrics` class uses instruments to write counts. The `ApplicationServices` class configures the dependency injection container to configure metrics. The `GamesService` class writes metrics (`GameStarted`, `MoveSet`, `GameEnded`).
+
+For **distributed tracing**, the `ActivitySource` is registered as a keyed service in `ApplicationServices`, and injected in the `GamesService` class. Activities are started using tags, and the status is set.
+
 - [Pragmatic Microservices with C# and Azure - the book](https://www.packtpub.com/en-us/product/pragmatic-microservices-with-c-and-azure-9781835088296)
 - [Pragmatic Microservices with C# and Azure - source code](https://github.com/PacktPublishing/Pragmatic-Microservices-with-CSharp-and-Azure)
 - [More Codebreaker repos](https://github.com/codebreakerapp)
 - [Blazor client app](https://blazor.codebreaker.app)
+
+## Important Links
+
+- [My blog](https://csharp.christiannagel.com)
+- [CN innovation](https://www.cninnovation.com)
