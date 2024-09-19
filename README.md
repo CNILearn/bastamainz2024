@@ -33,13 +33,14 @@ Donnerstag, 19.9.2024, 12:00 - 13:00, Gutenbergsaal 1
 
 Grafana? Prometheus? Application Insights? OpenTelemetry? Am Beispiel einer verteilten Lösung die sowohl on Premises als auch mit Azure Cloud Services läuft, sehen Sie wie Log, Metrics, und Distributed Tracing mit .NET-Applikationen implementiert werden können, und diese Daten mit Grafana und Prometheus sowie mit Azure Services wie Azure Monitor, Log Analytics und Application Insights ausgewertet werden kann.
 
-[Slides](slides/telemetry.pdf)
+[Slides](slides/Telemetry.pdf)
 
 ### Samples
 
 - Logging
 - Metrics
 - Distributed Tracing
+- Codebreaker service with logging, metrics, tracing
 
 #### Codebreaker
 
